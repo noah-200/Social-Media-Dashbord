@@ -1,0 +1,12 @@
+@use './mixins' as *;
+
+section,
+.container {
+  max-width: 1110px; // 1110px
+  padding: 0 25px;
+  margin: 0 auto 46px;
+
+  @include breakPoint(large) {
+    padding: 0;
+  }
+}

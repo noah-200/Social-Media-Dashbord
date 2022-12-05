@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+      />
+    <title>Frontend Mentor || Social Media Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+      />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"
+      />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"
+      />
+    <link rel="stylesheet" href="scss/index.css">
+    <script src="script/main.js" defer></script>
+    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: #3e52a3; }
+  </style>
+  </head>
+  <body class="">
+
+    <header class="header container">
+      <div class="header-title">
+        <h1>Social Media Dashboard</h1>
+        <span class="subtitle">Total Followers: 23,004</span>
+      </div>
+
+      <div class="toggle-theme-cont">
+        <label class="dark" for="theme-btn">Dark</label>
+        <button class="bg" id="theme-btn"></button>
+        <label class="light" for="theme-btn">Light</label>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <section class="card_container">
+        <div class="card card_icon-f">
+          <div class="card_platform">
+            <img
+              src="./images/icon-facebook.svg"
+              alt="Facebook" class="card_icon">
+            <div class="card_username">@nathanf</div>
+          </div>
+          <div class="card_followers">
+            <div class="card_count-big">
+              1987
+            </div>
+            <div class="card_label">Followers</div>
+          </div>
+          <div class="card_change-up"><img
+              src="./images/icon-up.svg"
+              alt="Up Arrow"> 12 Today</div>
+        </div>
+        <div class="card card_icon-t">
+          <div class="card_platform">
+            <img
+              src="./images/icon-twitter.svg"
+              alt="Twitter" class="card_icon">
+            <div class="card_username">@nathanf</div>
+          </div>
+          <div class="card_followers">
+            <div class="card_count-big">
+              1044
+            </div>
+            <div class="card_label">Followers</div>
+          </div>
+          <div class="card_change-up"><img
+              src="./images/icon-up.svg"
+              alt="Up Arrow"> 99 Today</div>
+        </div>
+        <div class="card card_icon-i">
+          <div class="card_platform">
+            <img
+              src="./images/icon-instagram.svg"
+              alt="Instagram" class="card_icon">
+            <div class="card_username">@realnathanf</div>
+          </div>
+          <div class="card_followers">
+            <div class="card_count-big">
+              11k
+            </div>
+            <div class="card_label">Followers</div>
+          </div>
+          <div class="card_change-up"><img
+              src="./images/icon-up.svg"
+              alt="Up Arrow"> 1099 Today</div>
+        </div>
+        <div class="card card_icon-y">
+          <div class="card_platform">
+            <img
+              src="./images/icon-youtube.svg"
+              alt="Youtube" class="card_icon">
+            <div class="card_username">Nathan F.</div>
+          </div>
+          <div class="card_followers">
+            <div class="card_count-big">
+              8239
+            </div>
+            <div class="card_label">Subscribers</div>
+          </div>
+          <div class="card_change-down"><img
+              src="./images/icon-down.svg"
+              alt="Down Arrow"> 144 Today</div>
+        </div>
+      </section>
+
+      <h2>Overview - Today</h2>
+
+      <section class="container">
+        <div class="card_container">
+          <div class="card card-grid">
+            <div class="card-subtitle">Page Views</div>
+            <img src="./images/icon-facebook.svg" alt="Facebook" class="card-icon">
+            <div class="card_count card_count-small">87</div>
+            <div class="card_change card_change-up"><img src="./images/icon-up.svg" alt="Up Arrow"> 3%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Likes</div>
+            <img src="./images/icon-facebook.svg" alt="Facebook" class="card-icon">
+            <div class="card_count card_count-small">52</div>
+            <div class="card_change card_change-down"><img src="./images/icon-down.svg" alt="Down Arrow"> 2%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Likes</div>
+            <img src="./images/icon-instagram.svg" alt="Instagram" class="card-icon">
+            <div class="card_count card_count-small">5462</div>
+            <div class="card_change card_change-up"><img src="./images/icon-up.svg" alt="Up Arrow"> 2257%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Profile Views</div>
+            <img src="./images/icon-instagram.svg" alt="Instagram" class="card-icon">
+            <div class="card_count card_count-small">52k</div>
+            <div class="card_change card_change-up"><img src="./images/icon-up.svg" alt="Up Arrow"> 1375%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Retweets</div>
+            <img src="./images/icon-twitter.svg" alt="Twitter" class="card-icon">
+            <div class="card_count card_count-small">117</div>
+            <div class="card_change card_change-up"><img src="./images/icon-up.svg" alt="Up Arrow"> 303%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Likes</div>
+            <img src="./images/icon-twitter.svg" alt="Twitter" class="card-icon">
+            <div class="card_count card_count-small">507</div>
+            <div class="card_change card_change-up"><img src="./images/icon-up.svg" alt="Up Arrow"> 553%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Likes</div>
+            <img src="./images/icon-youtube.svg" alt="Youtube" class="card-icon">
+            <div class="card_count card_count-small">107</div>
+            <div class="card_change card_change-down"><img src="./images/icon-down.svg" alt="Down Arrow"> 19%</div>
+          </div>
+          <div class="card card-grid">
+            <div class="card-subtitle">Total Views</div>
+            <img src="./images/icon-youtube.svg" alt="Youtube" class="card-icon">
+            <div class="card_count card_count-small">1407</div>
+            <div class="card_change card_change-down"><img src="./images/icon-down.svg" alt="Down Arrow"> 12%</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Noah Shaheen</a>.
+    </div>
+  </body>
+</html>

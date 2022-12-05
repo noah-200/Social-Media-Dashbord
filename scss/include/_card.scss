@@ -1,0 +1,175 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.card {
+  background: var(--bg-card);
+  color: var(--text1);
+  text-align: center;
+  padding: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  @include transition(150ms);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--hover-bg);
+
+    .card_username {
+      color: var(--hover-color);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+  }
+
+  &_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    @include breakPoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakPoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakPoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &_platform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    height: 20px;
+  }
+
+  &_icon {
+    margin-right: 8px;
+
+    &-f {
+      &::before {
+        background: var(--facebook);
+      }
+    }
+
+    &-t {
+      &::before {
+        background: var(--twitter);
+      }
+    }
+
+    &-i {
+      &::before {
+        background: linear-gradient(
+          225deg,
+          var(--instagram-end),
+          var(--instagram-middle) 50.91%,
+          var(--instagram-start) 100%
+        );
+      }
+    }
+
+    &-y {
+      &::before {
+        background: var(--youtube);
+      }
+    }
+  }
+
+  &_username {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &_followers {
+    margin-bottom: 25px;
+  }
+
+  &_count {
+    color: var(--text2);
+    font-weight: bold;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 4px;
+
+    &-big {
+      @extend .card_count;
+      font-size: 56px;
+    }
+
+    &-small {
+      @extend .card_count;
+      letter-spacing: 1px;
+    }
+  }
+
+  &_label {
+    color: var(--text1);
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 9px;
+  }
+
+  &_change {
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin-right: 4px;
+    }
+
+    &-up {
+      @extend .card_change;
+      color: var(--lime-green);
+    }
+
+    &-down {
+      @extend .card_change;
+      color: var(--bright-red);
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-items: start;
+    gap: 23px;
+    padding: 25px 21px;
+
+    .card_count {
+      margin-bottom: 0;
+    }
+
+    .card_count,
+    .card_change {
+      align-self: end;
+    }
+
+    img,
+    .card_change {
+      justify-self: end;
+    }
+  }
+}

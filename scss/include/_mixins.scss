@@ -1,0 +1,33 @@
+// 640px, 1150px, 1400px
+$breakPoint-up: (
+  'medium': '40em',
+  'large': '71.875em',
+  'xLarge': '87.5em',
+);
+
+// 639px, 1149px, 1399px
+$breakPoint-down: (
+  'small': '39.9375em',
+  'medium': '71.8125em',
+  'large': '87.4375em',
+);
+
+@mixin breakPoint($size) {
+  @media (min-width: map-get($breakPoint-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakPoint-down($size) {
+  @media (max-width: map-get($breakPoint-down, $size)) {
+    @content;
+  }
+}
+
+@mixin transition($delay: 0.4s) {
+  -webkit-transition: all $delay ease-in-out;
+  -moz-transition: all $delay ease-in-out;
+  -ms-transition: all $delay ease-in-out;
+  -o-transition: all $delay ease-in-out;
+  transition: all $delay ease-in-out;
+}

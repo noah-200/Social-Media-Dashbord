@@ -1,0 +1,58 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter);
+  background-color: var(--bg-blue);
+  color: var(--text2);
+  @include transition();
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 3px;
+
+  @include breakPoint(large) {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+
+  @include breakPoint-down(medium) {
+    margin-bottom: 27px;
+  }
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}

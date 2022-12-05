@@ -1,0 +1,35 @@
+:root {
+  --lime-green: #1db489;
+  --bright-red: #dc414c;
+  --facebook: #198ff5;
+  --twitter: #1ca0f2;
+  --instagram-start: #fdc468;
+  --instagram-middle: #ee867c;
+  --instagram-end: #df4996;
+  --youtube: #c4032a;
+  --hover-bg: #343b56;
+  --hover-color: #8c98c6;
+  --font-inter: 'Inter', sans-serif;
+
+  --toggle-start: #378fe6;
+  --toggle-end: #3eda82;
+  --toggle: linear-gradient(var(--toggle-start) to var(--toggle-end));
+  --bg-toggle: linear-gradient(225deg, var(--toggle-end) 0%, var(--toggle-start) 98.02%);
+  --bg-blue: #1e202a;
+  --top-bg-blue: #1f212e;
+  --bg-card: #252a41;
+  --text1: #8b97c6;
+  --text2: #ffffff;
+}
+
+body.light {
+  --toggle: #aeb3cb;
+  --bg-toggle: var(--toggle);
+  --bg-blue: #ffffff;
+  --top-bg-blue: #f5f7ff;
+  --bg-card: #f0f2fa;
+  --text1: #63687e;
+  --text2: #1e202a;
+  --hover-bg: #e1e4f0;
+  --hover-color: #8c98c6;
+}
